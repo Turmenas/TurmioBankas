@@ -107,19 +107,19 @@ body {
 .bank-header {
     display: flex;
     align-items: center;
-    margin-bottom: 20px; /* Add space below the header */
+    margin-bottom: 20px; 
 }
 
 .bank-icon {
-    width: 40px; /* Set the size of the icon */
+    width: 40px; 
     height: 40px;
-    margin-right: 10px; /* Space between the icon and the text */
-    border-radius: 50%; /* Optional: Makes the icon circular if desired */
-    background-color: #ffffff30; /* Placeholder background for visibility */
+    margin-right: 10px; 
+    border-radius: 50%; 
+    background-color: #ffffff30; 
 }
 
 .bank-name {
-    font-size: 20px; /* Font size for the bank name */
+    font-size: 20px; 
     font-weight: bold;
     color: #fff;
 }
