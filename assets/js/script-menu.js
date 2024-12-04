@@ -8,12 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalCancel = document.getElementById("modal-cancel");
     const notification = document.getElementById("notification");
 
-    // Retrieve balances and settings from localStorage
     let accountBalance = parseFloat(localStorage.getItem("accountBalance")) || 0;
     let savingsBalance = parseFloat(localStorage.getItem("savingsBalance")) || 0;
     let savingsPercentage = parseInt(localStorage.getItem("savingsPercentage")) || 0;
 
-    // Update UI with current values
     function updateUI() {
         accountBalanceElement.textContent = `$${accountBalance.toFixed(2)}`;
         savingsBalanceElement.textContent = `$${savingsBalance.toFixed(2)}`;
@@ -23,24 +21,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     updateUI();
 
-    // Show notification message
     function showNotification(message, type = "success") {
         notification.textContent = message;
 
-        // Change notification color based on type
         if (type === "success") {
-            notification.style.background = "#4caf50"; // Green
+            notification.style.background = "#4caf50"; // žalia
         } else if (type === "error") {
-            notification.style.background = "#f44336"; // Red
+            notification.style.background = "#f44336"; // raudona
         }
 
         notification.classList.remove("hidden");
         setTimeout(() => {
             notification.classList.add("hidden");
-        }, 3000); // Hide after 3 seconds
+        }, 3000); 
     }
 
-    // Show modal for user actions
     function showModal(title, callback, placeholder = "Enter amount") {
         modalTitle.textContent = title;
         modalInput.value = "";
@@ -62,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     }
 
-    // Deposit action
+    // Deposit
     document.querySelector('[data-action="deposit"]').addEventListener("click", () => {
         showModal("Deposit Money", (amount) => {
             const toSavings = (amount * savingsPercentage) / 100;
@@ -80,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Withdraw action
+    // Withdraw 
     document.querySelector('[data-action="get-cash"]').addEventListener("click", () => {
         showModal("Withdraw Money", (amount) => {
             if (amount > accountBalance) {
@@ -93,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Settings action
+    // Settings 
     document.querySelector('[data-action="settings"]').addEventListener("click", () => {
         showModal(
             "Set Savings Percentage",
@@ -110,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
         );
     });
 
-    // Exit action
+    // Exit
     document.querySelector('[data-action="exit"]').addEventListener("click", () => {
         window.location.href = "index.html";
     });

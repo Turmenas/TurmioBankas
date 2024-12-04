@@ -1,11 +1,10 @@
-/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
-    background-image: url('/assets/img/back.jpg'); /* Replace with your image path */
-    background-size: cover; /* Ensures the image covers the entire area */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; /* Prevents tiling */
+    background-image: url('/assets/img/back.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,12 +12,11 @@ body {
     color: #fff;
 }
 
-/* Hidden Class */
 .hidden {
     display: none;
 }
 
-/* Login Screen */
+/* prisijungimas */
 .login-screen {
     display: flex;
     flex-direction: column;
@@ -77,7 +75,7 @@ body {
     overflow: hidden;
 }
 
-/* Left Panel */
+/* kairysis skydelis */
 .left-panel {
     width: 40%;
     padding: 20px;
@@ -126,7 +124,7 @@ body {
     color: #fff;
 }
 
-/* Right Panel */
+/* dešinysis skydelis */
 .right-panel {
     width: 60%;
     padding: 20px;
@@ -135,7 +133,7 @@ body {
     justify-content: space-between;
 }
 
-/* Action Buttons */
+/* mygtukai */
 .action-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -158,8 +156,6 @@ body {
 .action-btn:hover {
     background: #2d6be4;
 }
-
-/* Existing styles remain the same */
 
 .modal {
     position: fixed;
@@ -204,13 +200,13 @@ body {
     background: #354dab;
 }
 
-/* Notification Banner */
+/* Pranešimai */
 .notification {
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: #4caf50; /* Green for success */
+    background: #4caf50;
     color: white;
     padding: 1em;
     border-radius: 5px;

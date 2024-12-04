@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const pinInput = document.getElementById("pin-input");
     const loginError = document.getElementById("login-error");
 
-    const correctPin = "1234"; // Example PIN
+    const correctPin = "1234"; // pazydinis PIN
 
     loginButton.addEventListener("click", () => {
         const enteredPin = pinInput.value;
