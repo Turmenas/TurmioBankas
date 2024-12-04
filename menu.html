@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Menu</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div id="notification" class="notification hidden"></div>
+    <div id="atm-container" class="atm-container">
+        <div class="left-panel">
+            <div class="bank-header">
+                <img src="assets/img/logo.png" class="bank-icon">
+                <h2>Bezdoniu bankas</h2>
+            </div>
+            <h2>Welcome</h2>
+            <p id="user-name">User Name</p>
+            <p>Account #1</p>
+            <p id="account-balance">$0</p>
+            <p>Savings #2</p>
+            <p id="savings-balance">$795</p>
+        </div>
+        <div class="right-panel">
+            <div class="action-buttons">
+                <button class="action-btn" data-action="get-cash">Withdraw</button>
+                <button class="action-btn" data-action="deposit">Deposit</button>
+                <button class="action-btn" data-action="settings">Settings</button>
+                <button class="action-btn" data-action="exit">Exit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <h3 id="modal-title">Modal Title</h3>
+            <input type="number" id="modal-input" placeholder="Enter amount">
+            <button id="modal-confirm" class="modal-btn">Confirm</button>
+            <button id="modal-cancel" class="modal-btn">Cancel</button>
+        </div>
+    </div>
+    
+    <script src="assets/js/script-menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: url('/assets/img/back.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+
+/* Login Screen */
+.login-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #042d5c;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.login-screen h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.pin-input {
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #1e4cad;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 150px;
+    text-align: center;
+}
+
+.login-button {
+    background: #1e4cad;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+.login-button:hover {
+    background: #2d6be4;
+}
+
+.error-message {
+    color: #ff477e;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* ATM Container */
+.atm-container {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    background-color: #003366;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+/* Left Panel */
+.left-panel {
+    width: 40%;
+    padding: 20px;
+    background: #042d5c;
+    box-shadow: inset -5px 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: #fff;
+}
+
+.left-panel h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.left-panel h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    justify-self:flex-start;
+}
+
+.left-panel p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.bank-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Add space below the header */
+}
+
+.bank-icon {
+    width: 40px; /* Set the size of the icon */
+    height: 40px;
+    margin-right: 10px; /* Space between the icon and the text */
+    border-radius: 50%; /* Optional: Makes the icon circular if desired */
+    background-color: #ffffff30; /* Placeholder background for visibility */
+}
+
+.bank-name {
+    font-size: 20px; /* Font size for the bank name */
+    font-weight: bold;
+    color: #fff;
+}
+
+/* Right Panel */
+.right-panel {
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.action-btn {
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    background: #1e4cad;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.action-btn:hover {
+    background: #2d6be4;
+}
+
+/* Existing styles remain the same */
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #1e2a78;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    padding: 1.5em;
+    text-align: center;
+    z-index: 1000;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content input {
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+}
+
+.modal-btn {
+    margin: 10px 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #4a6fff;
+    color: white;
+    cursor: pointer;
+}
+
+.modal-btn:hover {
+    background: #354dab;
+}
+
+/* Notification Banner */
+.notification {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #4caf50; /* Green for success */
+    color: white;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.notification.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@media (max-width: 768px) {
+    .atm-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-panel, .right-panel {
+        width: 100%;
+        text-align: center;
+    }
+
+    .action-buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-screen, .modal {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .action-btn {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .left-panel p, .left-panel h2 {
+        font-size: 16px;
+    }
+}
